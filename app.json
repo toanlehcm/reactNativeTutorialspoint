@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "reactNativeTutorialspoint",
+    "slug": "reactNativeTutorialspoint",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "reactNativeTutorialspoint"
+}
