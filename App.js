@@ -1,10 +1,43 @@
-import React from 'react';
-import HttpExample from './components/HttpExample.js'
+import React, { Component } from 'react'
+import { View, StyleSheet, Animated, TouchableOpacity } from 'react-native'
 
-const App = () => {
-  return (
-    <HttpExample />
-  )
+class Animations extends Component {
+  componentWillMount = () => {
+    this.animatedWidth = new Animated.Value(50)
+    this.animatedHeight = new Animated.Value(100)
+  }
+
+  animatedBox = () => {
+    Animated.timing(this.animatedWidth, {
+      toValue: 200,
+      duration: 1000
+    }).start()
+    Animated.timing(this.animatedHeight, {
+      toValue: 500,
+      duration: 1000
+    }).start()
+  }
+
+  render() {
+    const ANIMATED_STYLE = { width: this.animatedWidth, height: this.animatedHeight }
+
+    return (
+      <TouchableOpacity style={styles.container} onPress={this.animatedBox}>
+        <Animated.View style={[styles.box, ANIMATED_STYLE]} />
+      </TouchableOpacity>
+    )
+  }
 }
+export default Animations
 
-export default App
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  box: {
+    backgroundColor: 'blue',
+    width: 50,
+    height: 100
+  }
+})
