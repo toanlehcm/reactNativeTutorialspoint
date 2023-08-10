@@ -1,9 +1,9 @@
 import React from 'react';
-import Inputs from './components/inputs';
+import ScrollViewExample from './components/ScrollView';
 
 const App = () => {
   return (
-    <Inputs />
+    <ScrollViewExample />
   )
 }
 
