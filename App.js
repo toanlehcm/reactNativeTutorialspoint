@@ -1,9 +1,10 @@
-import React from 'react'
-import List from './List.js'
+import React from 'react';
+import Inputs from './components/inputs';
 
 const App = () => {
   return (
-    <List />
+    <Inputs />
   )
 }
+
 export default App
