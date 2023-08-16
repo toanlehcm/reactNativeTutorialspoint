@@ -1,43 +1,19 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, Animated, TouchableOpacity } from 'react-native'
+import { View, Text } from 'react-native'
+import '@google/model-viewer';
 
-class Animations extends Component {
-  componentWillMount = () => {
-    this.animatedWidth = new Animated.Value(50)
-    this.animatedHeight = new Animated.Value(100)
-  }
-
-  animatedBox = () => {
-    Animated.timing(this.animatedWidth, {
-      toValue: 200,
-      duration: 1000
-    }).start()
-    Animated.timing(this.animatedHeight, {
-      toValue: 500,
-      duration: 1000
-    }).start()
-  }
-
+class App extends Component {
   render() {
-    const ANIMATED_STYLE = { width: this.animatedWidth, height: this.animatedHeight }
-
     return (
-      <TouchableOpacity style={styles.container} onPress={this.animatedBox}>
-        <Animated.View style={[styles.box, ANIMATED_STYLE]} />
-      </TouchableOpacity>
+      <View>
+        <Text>App</Text>
+
+        <model-viewer alt="Neil Arms" src="https://diorama-3d.vercel.app/little_tokyo.glb" ar
+          environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp"
+          shadow-intensity="1" camera-controls touch-action="pan-y">
+        </model-viewer>
+      </View>
     )
   }
 }
-export default Animations
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  box: {
-    backgroundColor: 'blue',
-    width: 50,
-    height: 100
-  }
-})
+export default App
