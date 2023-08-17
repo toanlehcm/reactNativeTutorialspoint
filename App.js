@@ -9,22 +9,8 @@ class App extends Component {
 
     const ENVIRONMENT_TEST = require('./public/model3D/environment_test.hdr')
 
-    const MODEL_3D_HOUSE = require('./public/model3D/little_tokyo.glb');
-
     return (
       <View style={Styles.model3DContainer}>
-        {/* <Text>App</Text> */}
-
-        {/* <model-viewer alt="Neil Arms" src="https://diorama-3d.vercel.app/little_tokyo.glb" ar
-          environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp"
-          shadow-intensity="1" camera-controls touch-action="pan-y">
-        </model-viewer> */}
-
-        {/* <model-viewer alt="Neil Arms" src={MODEL_3D_HOUSE} ar
-          environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp"
-          shadow-intensity="1" camera-controls touch-action="pan-y">
-        </model-viewer> */}
-
         <model-viewer
           id="model_3D_hero_title"
           src={MODEL_3D_TOWN_ON_CAPITAL_ISLE}
@@ -35,9 +21,18 @@ class App extends Component {
           reveal="auto"
           shadow-intensity="1"
           camera-controls
-          touch-action="pan-y"
+          touch-action="none"
           environment-image={ENVIRONMENT_TEST}
-        // skybox-image={ENVIRONMENT_TEST}
+
+        // camera-orbit="-8.142746deg 68.967deg 0.6179899m" 
+        // camera-target="-0.003m 0.0722m 0.0391m" 
+
+        // field-of-view="45deg" 
+        // min-field-of-view="25deg" 
+        // max-field-of-view="45deg" 
+        // min-camera-orbit="auto auto 5%"
+
+        // interpolation-decay="200" 
         >
         </model-viewer>
       </View>
