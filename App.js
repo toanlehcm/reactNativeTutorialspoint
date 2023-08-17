@@ -1,40 +1,23 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import '@google/model-viewer';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Styles from './public/style/style.js';
+import HeroTitle from './components/HeroTitle.js';
+import Viewer3D from './components/Viewer3D.js';
 
 class App extends Component {
   render() {
-    const MODEL_3D_TOWN_ON_CAPITAL_ISLE = require('./public/model3D/issum_the_town_on_capital_isle.glb');
-
-    const ENVIRONMENT_TEST = require('./public/model3D/environment_test.hdr')
-
     return (
-      <View style={Styles.model3DContainer}>
-        <model-viewer
-          id="model_3D_hero_title"
-          src={MODEL_3D_TOWN_ON_CAPITAL_ISLE}
-          style={Styles.model3DHeroTitle}
-          alt="model 3D hero title"
-          loading="lazy"
-          auto-rotate
-          reveal="auto"
-          shadow-intensity="1"
-          camera-controls
-          touch-action="none"
-          environment-image={ENVIRONMENT_TEST}
+      <View className="container m-0 w-100">
+        <div className='row'>
+          <div className='col-12 m-0 p-0' style={Styles.model3DContainer}>
+            {/* <HeroTitle></HeroTitle> */}
+          </div>
 
-        // camera-orbit="-8.142746deg 68.967deg 0.6179899m" 
-        // camera-target="-0.003m 0.0722m 0.0391m" 
-
-        // field-of-view="45deg" 
-        // min-field-of-view="25deg" 
-        // max-field-of-view="45deg" 
-        // min-camera-orbit="auto auto 5%"
-
-        // interpolation-decay="200" 
-        >
-        </model-viewer>
+          <div className='col-12 m-0 p-0'>
+            <Viewer3D></Viewer3D>
+          </div>
+        </div>
       </View>
     )
   }
