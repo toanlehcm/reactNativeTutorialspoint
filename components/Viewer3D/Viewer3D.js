@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Image, Text } from 'react-native';
 import { Container, Row, Col, Button } from 'reactstrap';
+import '@google/model-viewer';
+
 import {
   TITLE_PAGE,
   DIAMOND_SHAPE,
@@ -16,7 +18,9 @@ import {
   IMG_ROMANCE_RINGS,
   IMG_PENDANTS,
   IMG_EARRINGS,
-  BUTTON_SELECT
+  BUTTON_SELECT,
+  MODEL_3D_SOLITAIRE_RINGS,
+  ENVIRONMENT_TEST
 } from '../../src/constants/Viewer3D';
 import Viewer3DStyle from './Viewer3DStyle';
 
@@ -182,7 +186,22 @@ const Viewer3D = () => (
           </Col>
         </Col>
 
-        <Col xs="5">
+        <Col xs="5" >
+          <div style={Viewer3DStyle.containerDiamondDescription}>
+            <model-viewer
+              id="model_3D_hero_title"
+              src={MODEL_3D_SOLITAIRE_RINGS.sr_1}
+              style={Viewer3DStyle.model3DDiamond}
+              alt="model 3D hero title"
+              loading="lazy"
+              auto-rotate
+              reveal="auto"
+              shadow-intensity="1"
+              camera-controls
+              touch-action="none"
+              environment-image={ENVIRONMENT_TEST}
+            ></model-viewer>
+          </div>
         </Col>
       </Row>
     </Container>

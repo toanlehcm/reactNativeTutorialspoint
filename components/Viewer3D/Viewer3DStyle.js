@@ -73,6 +73,27 @@ export default StyleSheet.create({
     lineHeight: "normal",
   },
 
+  containerDiamondDescription: {
+    width: 508,
+    height: 601,
+    flexShrink: 0,
+    backgroundColor: "#D9D9D9",
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  model3DDiamond: {
+    width: 217,
+    height: 163,
+    flexShrink: 0,
+    borderRadius: 8,
+    backgroundColor: "#87F630",
+    marginTop: 93,
+    marginRight: 171,
+    marginBottom: 345,
+    marginLeft: 136,
+  },
+
   containerButtonSelect: {
     marginTop: 87
   },

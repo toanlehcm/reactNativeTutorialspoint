@@ -94,3 +94,13 @@ export const IMG_EARRINGS = {
   ea_3: require('../../public/images/diamond.jpeg'),
   ea_4: require('../../public/images/diamond.jpeg')
 };
+
+/*--- Model 3D. ---*/
+export const MODEL_3D_SOLITAIRE_RINGS = {
+  sr_1: require('../../public/model3D/issum_the_town_on_capital_isle.glb'),
+  sr_2: require('../../public/model3D/issum_the_town_on_capital_isle.glb'),
+  sr_3: require('../../public/model3D/issum_the_town_on_capital_isle.glb'),
+  sr_4: require('../../public/model3D/issum_the_town_on_capital_isle.glb')
+};
+
+export const ENVIRONMENT_TEST = require('../../public/model3D/environment_test.hdr')
