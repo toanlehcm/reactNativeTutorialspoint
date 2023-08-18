@@ -2,6 +2,11 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
 
+  body: {
+    width: "100%",
+    height: "auto",
+  },
+
   model3DContainer: {
     width: "100%",
     height: "auto",
