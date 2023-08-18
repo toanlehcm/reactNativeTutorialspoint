@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native'
-import { IMG_DIAMOND_SHAPE } from '../../src/constants/Viewer3D';
 
 export default StyleSheet.create({
 
@@ -72,6 +71,22 @@ export default StyleSheet.create({
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "normal",
-  }
+  },
 
+  containerButtonSelect: {
+    marginTop: 87
+  },
+
+  textButtonSelect: {
+    color: "#000",
+    textAlign: "center",
+    fontFamily: "Inter",
+    fontSize: "30px",
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "normal",
+    borderRadius: 4,
+    backgroundColor: "#D9D9D9",
+    marginLeft: 19
+  }
 });

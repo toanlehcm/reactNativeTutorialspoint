@@ -49,6 +49,11 @@ export const EARRINGS = {
   ea_4: "EA 4",
 };
 
+export const BUTTON_SELECT = {
+  offTheShelf: "Off the Shelf",
+  retakeTest: "Retake Test",
+};
+
 /*--- IMAGE ---*/
 export const IMG_DIAMOND_SHAPE = {
   marquise: require('../../public/images/diamond.jpeg'),

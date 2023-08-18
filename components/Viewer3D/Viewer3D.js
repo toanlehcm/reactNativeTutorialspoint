@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
 import { View, Image, Text } from 'react-native';
 import { Container, Row, Col, Button } from 'reactstrap';
-import { TITLE_PAGE, DIAMOND_SHAPE, IMG_DIAMOND_SHAPE, CARAT_SIZE, IMG_CARAT_SIZE, TOP_RECOMMENDATION, SOLITAIRE_RINGS, ROMANCE_RINGS, PENDANTS, EARRINGS, IMG_SOLITAIRE_RINGS, IMG_ROMANCE_RINGS, IMG_PENDANTS, IMG_EARRINGS } from '../../src/constants/Viewer3D';
+import {
+  TITLE_PAGE,
+  DIAMOND_SHAPE,
+  IMG_DIAMOND_SHAPE,
+  CARAT_SIZE,
+  IMG_CARAT_SIZE,
+  TOP_RECOMMENDATION,
+  SOLITAIRE_RINGS,
+  ROMANCE_RINGS,
+  PENDANTS,
+  EARRINGS,
+  IMG_SOLITAIRE_RINGS,
+  IMG_ROMANCE_RINGS,
+  IMG_PENDANTS,
+  IMG_EARRINGS,
+  BUTTON_SELECT
+} from '../../src/constants/Viewer3D';
 import Viewer3DStyle from './Viewer3DStyle';
 
 const Viewer3D = () => (
@@ -158,6 +174,12 @@ const Viewer3D = () => (
               <p>{EARRINGS.ea_4}</p>
             </Col>
           </Row>
+
+          {/* --- Button select. --- */}
+          <Col xs="12" style={Viewer3DStyle.containerButtonSelect}>
+            <Button style={Viewer3DStyle.textButtonSelect}>{BUTTON_SELECT.offTheShelf}</Button>
+            <Button style={Viewer3DStyle.textButtonSelect}>{BUTTON_SELECT.retakeTest}</Button>
+          </Col>
         </Col>
 
         <Col xs="5">
